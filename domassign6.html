@@ -1,20 +1,20 @@
 <html>
     <head></head>
     <body>
-       <table border="2">
-        <thread>
-            <tr>
-             <th>Name</th>
-             <th>Gender</th>
-             <th>Place</th>
-            </tr>
-        </thread>
-        <tbody id ="dd">
+        <table border="3">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Place</th>
+                </tr>
+            </thead>
+            <tbody id = "sr">
 
-        </tbody>
-       </table>
-       <script>
-             var students = [
+            </tbody>  
+        </table>
+        <script>
+        var students = [
                  {
                  name:'jaya',
                  gender:'female',
@@ -51,20 +51,19 @@
                  place:'hitech'
                  },
              ]
-            students.forEach(function(s){
-                var ntr = document.createComment("tr");
-                var nametd = document.createElement("td");
+             students.forEach(function(s){
+                var ntr = document.createElement('tr');
+                var nametd = document.createElement('td');
                 nametd.innerHTML = s.name;
-                var gendertd = document.createElement("td");
+                var gendertd = document.createElement('td');
                 gendertd.innerHTML = s.gender;
-                var Placetd = document.createElement("td");
+                var placetd = document.createElement('td');
                 placetd.innerHTML = s.place;
                 ntr.appendChild(nametd);
                 ntr.appendChild(gendertd);
                 ntr.appendChild(placetd);
-                document.getElementById("dd").appendChild(ntr)
-            });
-
-       </script>
+                document.getElementById('sr').appendChild(ntr)
+             })
+        </script>
     </body>
 </html>

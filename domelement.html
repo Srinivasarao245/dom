@@ -1,0 +1,22 @@
+<html>
+    <head></head>
+       <body>
+         <h1>HELLO EDUPOLY</h1>
+         <ul id="d2"></ul>
+         <h1 id="d1">Edupoly</h1>
+         <script>
+             var x = document.getElementById('d1');
+             var y = document.createElement('h1');
+             y.innerHTML= 'srinivas'
+             document.body.appendChild(y)
+            //  console.log(y)
+
+            var sr = ['srinivas','praveen','karthik','surya','farooq','rushikesh']
+            sr.forEach(function(a){
+                var nli = document.createElement('li')
+                nli.innerHTML=a;
+                document.getElementById('d2').appendChild(nli)
+            })
+         </script>
+       </body>
+</html>
