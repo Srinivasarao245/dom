@@ -1,0 +1,70 @@
+<html>
+    <head></head>
+    <body>
+       <table border="2">
+        <thread>
+            <tr>
+             <th>Name</th>
+             <th>Gender</th>
+             <th>Place</th>
+            </tr>
+        </thread>
+        <tbody id ="dd">
+
+        </tbody>
+       </table>
+       <script>
+             var students = [
+                 {
+                 name:'jaya',
+                 gender:'female',
+                 place:'gachibowli',
+                 },
+                 {
+                 name:'dasu',
+                 gender:'male',
+                 place:'kphb'
+                 },
+                 {
+                 name:'swati',
+                 gender:'female',
+                 place:'pune'
+                 },
+                 {
+                 name:'pallavi',
+                 gender:'female',
+                 place:'assam'
+                 },
+                 {
+                 name:'kiran',
+                 gender:'male',
+                 place:'kondapur'
+                 },
+                 {
+                 name:'thirumala',
+                 gender:'male',
+                 place:'madhapur'
+                 },
+                 {
+                 name:'priya',
+                 gender:'female',
+                 place:'hitech'
+                 },
+             ]
+            students.forEach(function(s){
+                var ntr = document.createComment("tr");
+                var nametd = document.createElement("td");
+                nametd.innerHTML = s.name;
+                var gendertd = document.createElement("td");
+                gendertd.innerHTML = s.gender;
+                var Placetd = document.createElement("td");
+                placetd.innerHTML = s.place;
+                ntr.appendChild(nametd);
+                ntr.appendChild(gendertd);
+                ntr.appendChild(placetd);
+                document.getElementById("dd").appendChild(ntr)
+            });
+
+       </script>
+    </body>
+</html>

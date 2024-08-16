@@ -1,0 +1,34 @@
+<html>
+    <head></head>
+    <body>
+        <h1 id="di">COdeyourcareer</h1>
+        <ol>
+            <li>Kishore</li>
+            <li>Srinivas</li>
+            <li>Karthik</li>
+        </ol>
+        <h1>Edupoly</h1>
+        <script>
+             var p = document.getElementById("d1")
+             var a = p.innerHTML
+             console.log(a)
+             console.log(p.innerText)
+
+             var s = document.getElementsByTagName('li')
+             for(var i=0;i<=s.length-1;i++){
+                console.log(s[i].innerHTML)
+             }
+
+             var k = document.querySelectorAll("li")
+             for(var j=0;j<=k.length-1;i++){
+                console.log(k[j].innerHTML)
+             }
+             console.log(s)
+             console.log(k)
+
+             k.forEach(function(el){
+                console.log(el.innerHTML)
+             })
+        </script>
+    </body>
+</html>
