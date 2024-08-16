@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>This is Edupoly</title>
+    </head>
+    <body>
+        <h1 id="d2">Karthik</h1>
+        <ol>
+            <li>Satthi</li>
+            <li>Venke</li>
+            <li>Mani</li>
+        </ol>
+        <h1 onclick="abc(event)">Srinivas</h1>
+        <h1 onclick="abc(event)">Farooq</h1>
+        <h1 onclick="abc(event)">Lakshman</h1>
+        <input type="text" onkeyup="showtext(event)">
+        <h1 id="d4"></h1>
+        <!--<h1 id="d1" onclick="abc()">Srinivas</h1>
+        <h1 id="d3" onclick="sri()">Farooq</h1>
+        <h1 onclick="">Lakshman</h1> -->
+        <script>
+             function showtext(ev){
+                console.log(ev.target.value )
+                var z = document.getElementById("d4");
+                z.innerHTML=ev.target.value;
+            }
+            // function showtext(event){
+            //     console.log("Srinivas")
+            // }
+            function abc(ev){
+                var x = ev.target;
+                x.style.color ="red"
+                x.style.backgroundColor ='lightpink'
+                x.style.border = '10px solid blue'
+            }
+            // function sri(){
+            // var y = document.getElementById("d3")
+            // y.style.color='red'
+            // y.innerHTML='Farooqbasha.shaik'
+            // y.style.backgroundColor='lightblue'
+            // y.style.border='10px solid pink'
+            // }
+            
+            // function abc(){
+            // var x = document.getElementById("d1")
+            // x.style.color='red'
+            // x.innerHTML='Srinivasarao.Bagam'
+            // x.style.backgroundColor='lightblue'
+            // x.style.border='10px solid pink'
+            // }
+            // var x = document.getElementById("d1")
+            // x.style.color='red'
+            // x.innerHTML='Srinivasarao.Bagam'
+            // x.style.backgroundColor='lightblue'
+            // x.style.border='10px solid pink'
+            // console.log(x)
+            // console.dir(x)
+            // console.log(x)
+        </script>
+    </body>
+</html>
+<!-- comment
+<h1 id="d1" style="color: red; background-color: lightblue; border: 10px solid pink;">Srinivasarao.Bagam</h1>
+ QuerySelectorAll will gives you the wrong expression.
+ *Event is an object.
+ *event.target is used for the single function will applicable to the elements.
+ *Onkeyup is the process of input key giving will be gives the response output as the o/p.
+ *showtext (event) we can see the function process o/p on console.
+ *
+-->
