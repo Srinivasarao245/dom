@@ -1,0 +1,34 @@
+<html>
+    <head></head>
+    <body>
+        <h1 id="a1" (event)></h1>
+        <ul id="a2"></ul>
+        <script>
+        // Empty h1 put some text.   
+            // function abc(){
+            //   var x = document.getElementById('a1');
+            //   x.innerHTML='Hello DOM World! this is SRINIVAS';  
+            // } abc();
+        // Element h1 color add.    
+            // function abc(){
+            //   var x = document.getElementById('a1');
+            //   x.innerHTML='Hello DOM World! this is SRINIVAS'; 
+            //   x.style.color="red";
+            // } abc();
+        // Array ofnames create list.
+            // ar = ['ramesh','suresh','praveen','gopi','sunil','lakshman']
+            // var y = document.getElementById('a2')
+            // for(var i=0;i<=ar.length-1;i++){
+            // var li = document.createElement('li') 
+            // li.innerHTML=ar[i]
+            // y.appendChild(li)  
+            // }  
+        // Numbers create list.
+            for(var i=11;i<=17;i++){
+             var nli=document.createElement('li')
+             nli.innerHTML=i;
+             document.getElementById('a2').appendChild(nli)
+            }
+         </script>
+    </body>
+</html>

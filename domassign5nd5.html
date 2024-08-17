@@ -1,0 +1,83 @@
+<html>
+    <head></head>
+     <body>
+       <table border="4">
+           <thead>
+               <tr>
+                   <th>Name</th>
+                   <th>Age</th>
+                   <th>Gender</th>
+                   <th>Salary</th>
+                   <th>City</th>
+                </tr> 
+                <tbody id="sr">
+                    
+                </tbody>
+            </thead>
+        </table> 
+            <script>
+                var employes=[
+                    {
+                        name:'praveen',
+                        age:'36',
+                        gender:'male',
+                        salary:'10000',
+                        city:'hyd',
+                    },  
+                    {
+                        name:'srikanth',
+                        age:'32',
+                        gender:'male',
+                        salary:'20000',
+                        city:'bangaluru',
+                    }, 
+                    {
+                        name:'pradeep',
+                        age:'21',
+                        gender:'male',
+                        salary:'25000',
+                        city:'hyd',
+                    },  
+                    {
+                        name:'mounika',
+                        age:'20',
+                        gender:'female',
+                        salary:'30000',
+                        city:'nalgonda',
+                    },
+                    {
+                        name:'nikhil',
+                        age:'22',
+                        gender:'male',
+                        salary:'2000',
+                        city:'hguntur',
+                    },
+                    {
+                        name:'riya',
+                        age:'14',
+                        gender:'female',
+                        salary:'40000',
+                        city:'indore',
+                    },]
+                    employes.forEach(function(k){
+                        var ntr = document.createElement('tr');
+                        var nametd = document.createElement('td');
+                        nametd.innerHTML=k.name;
+                        var agetd = document.createElement('td');
+                        agetd.innerHTML = k.age;
+                        var gendertd = document.createElement('td');
+                        gendertd.innerHTML = k.gender;
+                        var salarytd = document.createElement('td');
+                        salarytd.innerHTML = k.salary;
+                        var citytd = document.createElement('td');
+                        citytd.innerHTML = k.city;
+                        ntr.appendChild(nametd);
+                        ntr.appendChild(agetd);
+                        ntr.appendChild(gendertd);
+                        ntr.appendChild(salarytd);
+                        ntr.appendChild(citytd);
+                        document.getElementById('sr').appendChild(ntr)
+                    })
+            </script>
+     </body>
+</html>

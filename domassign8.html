@@ -1,0 +1,202 @@
+<html>
+    <head></head>
+    <body>
+        <table border="2">
+           <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>City</th>
+                    <th>Salary</th>
+                </tr>
+           </thead>
+           <tbody id="a1">  </tbody> 
+        </table>
+        <table border="2">
+            <thead>
+                 <tr>
+                     <th>Firstname</th>
+                     <th>Lastname</th>
+                     <th>Age</th>
+                     <th>Gender</th>
+                     <th>City</th>
+                     <th>Salary</th>
+                 </tr>
+            </thead>
+            <tbody id="a2">  </tbody> 
+         </table>
+         <table border="2">
+            <thead>
+                 <tr>
+                     <th>Firstname</th>
+                     <th>Lastname</th>
+                     <th>Age</th>
+                     <th>Gender</th>
+                     <th>City</th>
+                     <th>Salary</th>
+                 </tr>
+            </thead>
+            <tbody id="a3">  </tbody> 
+         </table>
+         <table border="2">
+            <thead>
+                 <tr>
+                     <th>Firstname</th>
+                     <th>Lastname</th>
+                     <th>Age</th>
+                     <th>Gender</th>
+                     <th>City</th>
+                     <th>Salary</th>
+                 </tr>
+            </thead>
+            <tbody id="a4">  </tbody> 
+         </table>
+         <table border="2">
+            <thead>
+                 <tr>
+                     <th>Firstname</th>
+                     <th>Lastname</th>
+                     <th>Age</th>
+                     <th>Gender</th>
+                     <th>City</th>
+                     <th>Salary</th>
+                 </tr>
+            </thead>
+            <tbody id="a5">  </tbody> 
+         </table>
+            <script>
+                 var people = [
+                        {
+                        "firstname": "praveen",
+                        "lastname": "gubbala",
+                        "age": 36,
+                        "gender": "male",
+                        "city": "hyd",
+                        "salary": 10000
+                        },
+                        {
+                        "firstname": "srikanth",
+                        "lastname": "gubbala",
+                        "age": 32,
+                        "gender": "male",
+                        "city": "bengaluru",
+                        "salary": 20000
+                        },
+                        {
+                        "firstname": "pradeep",
+                        "lastname": "reddy",
+                        "age": 21,
+                        "gender": "male",
+                        "city": "hyd",
+                        "salary": 30000
+                        },
+                        {
+                        "firstname": "mounika",
+                        "lastname": "mudiraj",
+                        "age": 20,
+                        "gender": "female",
+                        "city": "nalgonda",
+                        "salary": 30000
+                        },
+                        {
+                        "firstname": "nikhil",
+                        "lastname": "m",
+                        "age": 22,
+                        "gender": "male",
+                        "city": "guntur",
+                        "salary": 2000
+                        },
+                        {
+                        "firstname": "riya",
+                        "lastname": "bhadouria",
+                        "age": 14,
+                        "gender": "female",
+                        "city": "indore",
+                        "salary": 40000
+                        },
+                        {
+                        "firstname": "karthik",
+                        "lastname": "vemuri",
+                        "age": 22,
+                        "gender": "male",
+                        "city": "guntur",
+                        "salary": 50000
+                        }    
+                     ]
+                people.forEach(function(a){
+                    var ntr = document.createElement('tr');
+                    var firstnametd=document.createElement('td');
+                    firstnametd.innerHTML=a.firstname;
+                    var lastnametd=document.createElement('td');
+                    lastnametd.innerHTML=a.lastname;
+                    var agetd=document.createElement('td');
+                    agetd.innerHTML=a.age;
+                    var gendertd=document.createElement('td');
+                    gendertd.innerHTML=a.gender;
+                    var citytd=document.createElement('td');
+                    citytd.innerHTML=a.city;
+                    var salarytd=document.createElement('td');
+                    salarytd.innerHTML=a.salary;
+                    ntr.appendChild(firstnametd);
+                    ntr.appendChild(lastnametd);
+                    ntr.appendChild(agetd);
+                    ntr.appendChild(gendertd);
+                    ntr.appendChild(citytd);
+                    ntr.appendChild(salarytd);
+                    document.getElementById('a1').appendChild(ntr)
+                })
+                people.forEach(function(a){
+                    var ntr = document.createElement('tr');
+                    var firstnametd=document.createElement('td');
+                    firstnametd.innerHTML=a.firstname;
+                    var lastnametd=document.createElement('td');
+                    lastnametd.innerHTML=a.lastname;
+                    var agetd=document.createElement('td');
+                    agetd.innerHTML=a.age;
+                    var gendertd=document.createElement('td');
+                    gendertd.innerHTML=a.gender;
+                    var citytd=document.createElement('td');
+                    citytd.innerHTML=a.city;
+                    var salarytd=document.createElement('td');
+                    salarytd.innerHTML=a.salary;
+                    ntr.appendChild(firstnametd);
+                    ntr.appendChild(lastnametd);
+                    ntr.appendChild(agetd);
+                    ntr.appendChild(gendertd);
+                    ntr.appendChild(citytd);
+                    ntr.appendChild(salarytd);
+                    if(a.gender=='male'){
+                        document.getElementById('a2').appendChild(ntr)
+                    }
+                    else{   document.getElementById('a3').appendChild(ntr)}
+                })
+                people.forEach(function(a){
+                    var ntr = document.createElement('tr');
+                    var firstnametd=document.createElement('td');
+                    firstnametd.innerHTML=a.firstname;
+                    var lastnametd=document.createElement('td');
+                    lastnametd.innerHTML=a.lastname;
+                    var agetd=document.createElement('td');
+                    agetd.innerHTML=a.age;
+                    var gendertd=document.createElement('td');
+                    gendertd.innerHTML=a.gender;
+                    var citytd=document.createElement('td');
+                    citytd.innerHTML=a.city;
+                    var salarytd=document.createElement('td');
+                    salarytd.innerHTML=a.salary;
+                    ntr.appendChild(firstnametd);
+                    ntr.appendChild(lastnametd);
+                    ntr.appendChild(agetd);
+                    ntr.appendChild(gendertd);
+                    ntr.appendChild(citytd);
+                    ntr.appendChild(salarytd);
+                    if(a.salary>20000){
+                        document.getElementById('a4').appendChild(ntr)
+                    }
+                    if (a.age>25){  document.getElementById('a5').appendChild(ntr) }
+                })
+            </script>
+    </body>
+</html>

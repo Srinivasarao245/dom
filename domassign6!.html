@@ -1,0 +1,66 @@
+<html>
+    <head></head>
+    <body>
+        <div style="border: 10px solid blue;"> <ul id="d1" style="margin-right: 10px;"></ul> </div>
+        <script>
+            var students = [
+                {
+                name:'jaya',
+                gender:'female',
+                place:'gachibowli',
+                },
+                {
+                name:'dasu',
+                gender:'male',
+                place:'kphb'
+                },
+                {
+                name:'swati',
+                gender:'female',
+                place:'pune'
+                },
+                {
+                name:'pallavi',
+                gender:'female',
+                place:'assam'
+                },
+                {
+                name:'kiran',
+                gender:'male',
+                place:'kondapur'
+                },
+                {
+                name:'thirumala',
+                gender:'male',
+                place:'madhapur'
+                },
+                {
+                name:'priya',
+                gender:'female',
+                place:'hitech'
+                },
+            ]
+            var a = 'name';
+            var b = 'gender';
+            var c = 'place';
+            for(var i=0;i<=students.length-1;i++){
+                var nli=document.createElement('li');
+                var ul=document.createElement('ul');
+                var ali=document.createElement('li');
+                var mli=document.createElement('li')
+             nli.innerHTML=students[i][a];
+             ali.innerHTML=students[i][b];
+             mli.innerHTML=students[i][c];
+             document.getElementById('d1').appendChild(nli);
+             ul.appendChild(ali);
+             ul.appendChild(mli);
+            nli.appendChild(ul);
+            document.getElementById('d1').appendChild(nli)
+            if(students[i][b]=='female'){
+                nli.style.backgroundColor='red';
+            }
+            else{ nli.style.backgroundColor='green' }
+        }
+            </script>
+    </body>
+</html>

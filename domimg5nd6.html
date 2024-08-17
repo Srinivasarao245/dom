@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <style>
+            #a1
+            img{
+                width:900px;
+                height:1000px;
+            }
+          
+        </style>
+    </head>
+    <body>
+        <div id="a1">
+        </div>
+        <script>
+            var ar = ['https://wallpaperset.com/w/full/c/9/0/522708.jpg' ,'https://cdn.shopify.com/s/files/1/0243/3489/3161/products/product-image-248957299_1024x1024.jpg?v=1576317990','https://wallpaperset.com/w/full/c/9/0/522708.jpg','https://is3-ssl.mzstatic.com/image/thumb/Music124/v4/6c/d7/45/6cd7455c-e2b3-82a9-d754-aaddcf5fd81d/195448857689.jpg/1200x1200bf-60.jpg']
+            ar.forEach(function(a){
+                var img = document.createElement('img');
+                    img.src=a;
+                    document.getElementById('a1').appendChild(img)
+            })
+        </script>
+    </body>
+</html>
