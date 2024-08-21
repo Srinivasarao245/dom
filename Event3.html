@@ -14,3 +14,23 @@
         </script>
     </body>
 </html>
+<html>
+    <head></head>
+     <body>
+        <button id="a1" onclick="abc1()"></button>
+        <script>
+            function abc1() {
+            var x=document.getElementById('a1');
+            console.log(x.innerText);
+            if (x.innerText=="green") {
+                 x.innerText="red"
+                 x.style.backgroundColor='red'
+            } 
+            else {
+                 x.innerText="green"
+                 x.style.backgroundColor='green'
+            }
+            }
+        </script>
+     </body>
+</html>
