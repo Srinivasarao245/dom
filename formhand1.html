@@ -1,0 +1,38 @@
+<html>
+    <head></head>
+     <body>
+        <!-- <input type="text" id="a1" >
+        <br>
+        <input type="text" id="a2" >
+        <br>
+        <button onclick="abc()">Addition</button>
+        <script>
+            function abc(){
+                var x = document.getElementById('a1')
+                var y = document.getElementById('a2')
+                console.log (parseInt (x.value)+parseInt (y.value))
+            } -->
+        </script>
+     </body>
+</html>
+<br>
+<html>
+    <head></head>
+     <body>
+        <input type="text" id="a1" >
+        <br>
+        <input type="text" id="a2" >
+        <br>
+        <button onclick="abc()">Addition</button>
+        <br>
+        <b id="res"></b>
+        <script>
+            function abc(){
+                var x = +document.getElementById('a1').value
+                var y = +document.getElementById('a2').value
+                var z = x+y;
+                document.getElementById("res").innerHTML=z
+                 }
+        </script>
+     </body>
+</html>
