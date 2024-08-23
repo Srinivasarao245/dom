@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <style>
+            #s{ background-color: blue; }
+            #sr{ background-color: red; }
+        </style>
+    </head>
+     <body> <center>
+                <button id="s" onclick="ab()"> Like </button><span id="a1">0</span>
+                <br>
+                <button id="sr" onclick="abc()"> Dislike </button><span id="a2">0</span>
+            </center>
+        <script>
+            var i=0;
+            function ab(){
+                var x = document.getElementById('a1')
+                x.innerHTML=i;
+                i++;
+            }
+            function abc(){
+                var y = document.getElementById('a2')
+                y.innerHTML=i;
+                i++;
+            }
+        </script>
+     </body>
+</html>

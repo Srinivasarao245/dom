@@ -1,8 +1,17 @@
 <html>
     <head></head>
      <body>
+      <center>
+         <button onclick="abc()" >Hello</button><span id="a1"></span>  </center>
         <script>
-            
+         var ar = ['true','false']
+         var i=0;
+             function abc(){
+                var a = document.getElementById('a1');
+                a.innerHTML=ar[i]
+                i++; 
+                if(i==ar.length){i=0}
+            }
         </script>
      </body>
 </html>

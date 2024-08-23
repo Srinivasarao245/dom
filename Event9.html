@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <style>
+             #a1{ border:2px solid; width: 200px; height: 100px;  }
+        </style>
+    </head>
+     <body>
+        <div id="a1"></div><br>
+        <center>
+            <button onclick="ab()">ON</button>
+            <button onclick="abc()">OFF</button>
+        </center>
+        <script>
+            function ab(){
+                document.getElementById('a1').style.backgroundColor="green"  
+            }
+            // var ar = ['red','blue','green','purple','brown','gold'];
+            // var i=0;
+            // function ab(){
+            //     document.getElementById("a1").style.backgroundColor=ar[i]
+            //     i++;
+            // }
+            function abc(){
+                document.getElementById('a1').style.backgroundColor=''
+            } 
+        </script>
+     </body>
+</html>
