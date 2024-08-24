@@ -1,0 +1,48 @@
+<html>
+    <head></head>
+     <body>
+        <script>
+            // var c = 200;
+            // function abc(){
+            //     var c = 300;
+            // }
+            // abc();
+            // console.log(c);     // gives 200
+            // var c = 200;
+            // function abc(){
+            //     console.log(c);    //undefined.
+            //     var c = 300;
+            //     // console.log(c);      //gives 300
+            // } abc();
+            // var c = 200;
+            // function abc(){
+            //     c = c+10;           //c is having a two vaiues will stores in scope.
+            //     console.log(c);
+            // }
+            // abc();  //210
+            // abc();  //220
+            function abc(){
+                var c = 200;
+                c=c+10; 
+                console.log(c)
+            }
+            abc();      //210
+            abc();      //210
+            console.dir(abc)
+        </script>
+     </body>
+</html>
+
+<!-- scanning phase 
+     *.var c
+     *.function abc()
+    Execution phase
+    *.c=200 will assigns
+    *.abc()will calls function
+    Here functin has a 2 phases
+    -> creation phase or execution context will creates.
+    *.var c will creates a memory.
+     -> execution time will checks then allocates the values.
+     *.c is undefined will gives.
+     ([Scopes]:Scopes:Global {window: Window, self: Window, document: document, name: '', location: Location, …})
+-->

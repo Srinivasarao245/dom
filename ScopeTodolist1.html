@@ -1,0 +1,32 @@
+<html>
+    <head></head>
+     <body>
+        <input type="text" id="a2">
+        <button onclick="abc()"> Add Todolist</button>
+        <ul id="a1"></ul>
+        <script>
+            var ar = [];
+            function abc(){
+                var x = document.getElementById('a2').value;
+                ar.push(x);
+                xyz();}
+             function xyz(){
+                document.getElementById("a1").innerHTML="";
+                ar.forEach(function(i,j){
+                    var nli = document.createElement('li');
+                    nli.innerHTML=i;
+                    // var dbtn = document.createElement('button');
+                    // dbtn.onclick = function(){ ar.sort(j,1); xyz() }
+                    // dbtn.innerHTML = "Done";
+                    // nli.appendChild(dbtn);
+                    var dbtn = document.createElement('button');
+                    dbtn.onclick = function(){ ar.splice(j,1); xyz() }
+                    dbtn.innerHTML = "Delete";
+                    nli.appendChild(dbtn);
+                    // nli.onclick = function(){ alert(j) }
+                    document.getElementById("a1").appendChild(nli);
+                })
+             }
+        </script>
+     </body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+    <head></head>
+     <body>
+        <ul id="a1"></ul>
+        <script>
+        //    var myfav = ['anuska','trisha','deepika','keerthi suresh','saipallavi'];
+        //    for(var i=0;i<=myfav.length-1;i++){
+        //     var nli=document.createElement('li');
+        //     nli.innerHTML=myfav[i];
+        //     // nli.onclick=function abc(){ alert("Hi") }    //will gives the Hi.
+        //     nli.onclick=function abc(){ alert(i) }          //will gives the total length
+        //     document.getElementById("a1").appendChild(nli)
+        //    } 
+           var myfav = ['anuska','trisha','deepika','keerthi suresh','saipallavi'];
+          myfav.forEach(function (m,i){                 //here function and closure scope also binds and gives the index values.
+            var nli = document.createElement('li');
+            nli.innerHTML=m;
+            nli.onclick=function abc(){ alert(i) }      //in this closure scope will bind to the inner function.      
+            document.getElementById("a1").appendChild(nli)
+           } )
+        </script>
+     </body>
+</html>
+<!-- in scanning phase will stires in memory.
+     *.my fav =(undefined)
+     *.var i = (undefined)
+     *.var nli=(undefined)
+     *.function abc() (declaration)
+     *.function will binds on functio definition.
+-->

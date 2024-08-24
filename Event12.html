@@ -1,0 +1,26 @@
+<html>
+    <head></head>
+     <body>
+         Enter image URL 
+         <br>
+         <input type="text" id="a1">
+         <br>
+         <button onclick="abc()">Add Image</button>
+         <br>
+         <div id="a2"></div>
+         <!-- <img id="a2">   -->
+        <script>
+            // function abc(){
+            //     var x = document.getElementById('a1').value;
+            //     var y = document.getElementById('a2');
+            //     y.src = x;
+            // } 
+            function abc(){
+                var x = document.getElementById("a1").value;
+                var Nimg = document.createElement('img');
+                Nimg.src = x;
+                document.getElementById('a2').appendChild(Nimg)
+            } 
+        </script>
+     </body>
+</html>

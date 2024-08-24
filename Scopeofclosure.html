@@ -1,0 +1,46 @@
+<html>
+    <head></head>
+     <body>
+        <script>
+            // var a = 100;
+            // function abc(){
+            //     var b = 200;
+            //     console.log(a); 
+            //     function xyz(){
+            //         console.log(a);
+            //         console.log(b);
+            //     }
+            //     console.dir(xyz);
+            // }
+            // abc();
+            // var a = 100;
+            // function abc(c){
+            //     var b = 200;
+            //     console.log(a); 
+            //     function xyz(){
+            //         console.log(a);
+            //         console.log(b);
+            //         console.log(c);
+            //     }
+            //     console.log(xyz);
+            // }
+            // abc(143);
+            var a = 100;
+            function abc(c){
+                var b = 200;
+                console.log(a); 
+                function xyz(){
+                    console.log(a);
+                    console.log(c);
+                }
+                xyz();
+            }
+            abc(143);
+        </script>
+     </body> 
+</html>
+<!-- *.([Scopes]:Scopes[2]
+     *.Closure (abc) {b: 200 ,c:143}
+     *.Global {window: Window, self: Window, document: document, name: '', location: Location, …}) 
+     *.
+-->

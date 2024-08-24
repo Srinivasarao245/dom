@@ -1,0 +1,22 @@
+<html>
+    <head></head>
+     <body>
+        <h1>Count:<span id="a1"></span></h1>
+        <button onclick="ab()">Increment</button>
+        <button onclick="abc()">Decrement</button>
+        <button onclick="abcd()">Recet</button>
+        <script>
+            var c = 0;
+            document.getElementById('a1').innerHTML=c;
+            function ab(){ c++;
+                document.getElementById('a1').innerHTML=c;
+             }
+             function abc(){ c--;
+                document.getElementById('a1').innerHTML=c;
+             }
+             function abcd(){ c=0;
+                document.getElementById('a1').innerHTML=c;
+             }
+            </script>
+     </body>
+</html>
