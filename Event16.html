@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <style>
+            #a1{ border: 2px solid; width: 300px; height: 300px; }
+        </style>
+    </head>
+     <body>
+        <div id="a1" onclick="abc()"><img id="a6" src=""></div>
+        <script> 
+            var ar =['https://th.bing.com/th/id/OIP.b_K0vxRGaTbsDFKF7yDragHaJ7?rs=1&pid=ImgDetMain','https://th.bing.com/th/id/OIP._nlE4K9eFUzoRqIbj6sblQHaNK?rs=1&pid=ImgDetMain','https://th.bing.com/th/id/OIP.b_K0vxRGaTbsDFKF7yDragHaJ7?rs=1&pid=ImgDetMain','https://t4.ftcdn.net/jpg/07/08/47/75/240_F_708477508_DNkzRIsNFgibgCJ6KoTgJjjRZNJD4mb4.jpg','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBaxCORqiO3GHBmYstnMMFvjUa0i6Ijnma2w&s']
+            var i=0;
+            function abc(){
+                var a = document.getElementById("a6");
+                a.src=ar[i];
+                i++;
+                if (i==ar.length) {
+                    i=0
+                }
+               console.log(i);
+               
+            }
+        </script>
+     </body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+    <head></head>
+     <body>
+        <div id="a1"> <img id="a3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAakhlmCqHMx1B6QTIdns8dCAELz-hp2HV6A&s">
+         </div>
+        <button onclick="abc()" id="a2">ON</button>
+        <script>
+            function abc(){
+                var x = document.getElementById('a2')
+                var y=document.getElementById('a3');
+                if(x.innerHTML==="ON"){
+                    x.innerHTML="OFF";
+                    y.src="http://www.billfrymire.com/gallery/webJpgs/incandescent-lightbulb-glow.jpg"
+                }
+                else{ x.innerHTML="ON"
+                    y.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAakhlmCqHMx1B6QTIdns8dCAELz-hp2HV6A&s"
+                    
+                 }
+            }
+        </script>
+     </body>
+</html>

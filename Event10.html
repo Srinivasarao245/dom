@@ -12,11 +12,12 @@
         </center>
         <script>
             function abc(){
-               if(document.getElementById("a1").style.backgroundColor=' '){
-                a1.style.backgroundColor='red'
+                var x=document.getElementById("a1");
+               if(x.style.backgroundColor=='red'){
+                x.style.background='none'
                }
                else{
-                a1.style.backgroundColor='';
+                x.style.backgroundColor='red';
             }
            }
         </script>

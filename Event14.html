@@ -1,0 +1,22 @@
+<html>
+    <head></head>
+     <body>
+        <h1>Dieplay images using img Url</h1>
+        <center>
+        Enter image URL:
+        <input id="a1" type="text">
+        <br>
+        <button onclick="abc()">ADD IMAGE</button>
+        <br>
+        <div id="a2"></div>
+        </center>
+        <script>
+            function abc(){
+                var a = document.getElementById("a1").value;
+                var nimg = document.createElement("img");
+                nimg.src=a;
+                document.getElementById("a2").appendChild(nimg)
+              } 
+        </script>
+     </body>
+</html>
