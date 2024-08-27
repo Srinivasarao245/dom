@@ -9,24 +9,62 @@
                 padding:8px;
                 text-align: center;
             }
-            
+            #u{
+               display:flex;
+               flex-wrap: wrap;
+            }
+            #u li{
+                margin-top: 50px;
+                width:250px;
+                height:250px;
+                border:1px solid;
+                list-style: none;
+            }
         </style>
     </head>
      <body>
         <center>
             <h1>Add Contact Cards</h1> 
-            <h1>Name: <input type="text" > </h1>
-            <h1>Number: <input type="text" > </h1>
-            <h1>Email: <input type="email" > </h1>
-            <h1>Enter image URL: <input type="url" > </h1>
+            <h1>Name: <input type="text" name="Name"> </h1>
+            <h1>Number: <input type="text" name="Number"> </h1>
+            <h1>Email: <input type="email" name="Email"> </h1>
+            <h1>Enter image URL: <input type="url" name="image"> </h1>
             <button onclick="abc()">Add Contact</button>
             <br>
             <br>
-        </center>
             <div id="a1"></div>
+        </center>
         <script>
             var ar = [];
-            var ar = document.getElementById("a1");
+            function abc(ev){
+                ev.preventDefault();
+                var form = new FormData(ev.target);
+                var obj = {};
+                for (var i of form.keys()){
+                    obj[i] = form.get(i);
+                }
+                ar.push(obj);
+                ab();
+            }
+            function ab(){
+                document.getElementById("a1").innerHTML = "";
+                ar.forEach(function (a){
+                    var nli = document.createElement("li");  
+                    var li=document.createElement('img');
+                    li.src = a["image"];
+                    var ac = document.createElement('h3');
+                    ac.innerHTML = "Name:"+["Name"];
+                    var ad = document.createElement("h3");
+                    ad.innerHTML = "Number:"+["Number"];
+                    var ae = document.createElement("h3");
+                    ae.innerHTML = "Email:"+["Email"];
+                   nli.appendChild(img);
+                   nli.appendChild(ac);
+                   nli.appendChild(ad);
+                   nli.appendChild(ae);
+                   document.getElementById("a1").appendChild(nli);
+                })
+            }
             
         </script>
      </body>
