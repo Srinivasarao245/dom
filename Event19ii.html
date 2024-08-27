@@ -1,0 +1,77 @@
+<html>
+    <head></head>
+     <body>
+        <center>
+           <h1>Add Contact Cords</h1> 
+           <h1> Name: <input type="text" name="Name" id="a2"></h1>
+           <h1> Gender: <input type="text" name="gender" id="a3"></h1>
+           <h1> Number: <input type="text" name="Number" id="a4"></h1>
+           <h1> Email: <input type="email" name="Email" id="a5"></h1>
+           <h1> Image URL: <input type="text" name="image" id="a6"></h1>
+           <button onclick="abc()">Add Contact</button>
+           <br> <br>
+           <div id="a1"></div>
+        </center>
+        <script>
+            function abc(){
+                var a = document.createElement('div');
+                a.style.width="300px" ;
+                a.style.height="300px";
+                a.style.border="2px solid";
+                a.style.backgroundImage=
+                document.getElementById('a1').appendChild(a);
+                var b = document.createElement("img");
+                var a1 = document.getElementById("a6").value;
+                b.setAttribute("src",a1);
+                a.appendChild(b);
+                b.style.width="50px";
+                b.style.height="50px";
+                b.style.borderRadius="30px";
+                var c = document.createElement("h4");
+                var c1 = document.getElementById("a2").value;
+                c.innerText="Name"+c1;
+                a.appendChild(c);var d = document.createElement("h4");
+                var d1 = document.getElementById("a3").value;
+                d.innerText="Gender"+d1;
+                a.appendChild(d);
+                var e = document.createElement("h4");
+                var e1 = document.getElementById("a4").value;
+                e.innerText="Number"+e1;
+                a.appendChild(e);
+                var f = document.createElement("h4");
+                var f1 = document.getElementById("a5").value;
+                f.innerText="Email"+f1;
+                a.appendChild(f);
+            }
+        </script>
+     </body>  
+</html>
+<!--  var a = document.createElement("div");
+                a.style.backgroundColor="purple"
+                a.style.width="300px ";
+                a.style.height="200px ";
+                a.style.border='2px solid';
+                document.getElementById("a1").appendChild(a);
+                var ni = document.createElement("img");
+                var n=document.getElementById('a5').value;
+                ni.setAttribute('src',n);
+                a.appendChild(ni); 
+                ni.style.width="50px";               
+                ni.style.height="50px";               
+                ni.style.borderRadius='35px';
+                var c = document.createElement("h3");
+                var s=document.getElementById('a2').value;
+                c.innerText= "Name :"+s;
+                a.appendChild(c)
+                var c1 = document.createElement("h3");
+                var r=document.getElementById('a3').value;
+                c1.innerText= "Number :"+r;
+                a.appendChild(c1)
+                var c2 = document.createElement("h3");
+                var i=document.getElementById('a4').value;
+                c2.innerText= "Email :"+i;
+                a.appendChild(c2)
+                var x=document.createElement('div');
+                x.style.height='10px'
+                document.getElementById('a1').appendChild(x);
+            } -->
