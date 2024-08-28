@@ -1,65 +1,67 @@
 <html>
     <head></head>
     <body>
-        <table border="2">
-            <thead>
-                 <tr>
-                    <th>Name</th>
-                    <th>Type</th>
-                    <th>Price</th>
-                    <th>Category</th>
-                    <th>Manufacturer</th>
-                 </tr>   
-            </thead>
-            <tbody id="a1">
-                 </tbody>
-        </table>
-        <table border="2">
-            <thead>
-                 <tr>
-                    <th>Name</th>
-                    <th>Price</th> 
-            </thead>
-            <tbody id="a2">
-                 </tbody>
-        </table>
-        <table border="2">
-            <thead>
-                 <tr>
-                    <th>Name</th>
-                    <th>Type</th>
-                    <th>Price</th>
-                    <th>Category</th>
-                    <th>Manufacturer</th> 
-            </thead>
-            <tbody id="a3">
-                 </tbody>
-        </table>
-        <table border="2">
-            <thead>
-                 <tr>
-                    <th>Name</th>
-                    <th>Type</th>
-                    <th>Price</th>
-                    <th>Category</th>
-                    <th>Manufacturer</th>
-            </thead>
-            <tbody id="a4">
-                 </tbody>
-        </table>
-        <table border="2">
-            <thead>
-                 <tr>
-                    <th>Name</th>
-                    <th>Type</th>
-                    <th>Price</th>
-                    <th>Category</th>
-                    <th>Manufacturer</th>
-            </thead>
-            <tbody id="a5">
-                 </tbody>
-        </table>
-        <script>
+        All products.
+            <table border="2">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Price</th>
+                        <th>Category</th>
+                        <th>Manufacturer</th>
+                    </tr>   
+                </thead>
+                <tbody id="a1"></tbody>
+            </table>
+            Price of each product in atable.
+            <table border="2">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th> 
+                </thead>
+                <tbody id="a2"></tbody>
+            </table>
+            Products in ascending order of their prices.
+            <table border="2">
+              <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Price</th>
+                        <th>Category</th>
+                        <th>Manufacturer</th>
+                </thead>
+                <tbody id="a5"> </tbody>
+            </table>
+            HardGoods.
+            <table border="2">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Price</th>
+                        <th>Category</th>
+                        <th>Manufacturer</th> 
+                </thead>
+                <tbody id="a3">
+                    </tbody>
+            </table>
+            Software.
+            <table border="2">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Price</th>
+                        <th>Category</th>
+                        <th>Manufacturer</th>
+                </thead>
+                <tbody id="a4">
+                    </tbody>
+            </table>
+            <script>
             var products = [
                         {
                             "name": "Duracell - AAA Batteries (4-Pack)",
@@ -104,24 +106,24 @@
                             "manufacturer": "White Canyon",				
                         }
                     ]
-                products.forEach(function(a){
-                    var ntr = document.createElement('tr');
-                    var nametd = document.createElement('td');
-                    nametd.innerHTML=a.name;
-                    var typetd = document.createElement('td');
-                    typetd.innerHTML=a.type;
-                    var pricetd = document.createElement('td');
-                    pricetd.innerHTML=a.price;
-                    var categorytd = document.createElement('td');
-                    categorytd.innerHTML=a.category;
-                    var manufacturertd = document.createElement('td');
-                    manufacturertd.innerHTML=a.manufacturer;
-                    ntr.appendChild(nametd);
-                    ntr.appendChild(typetd);
-                    ntr.appendChild(pricetd);
-                    ntr.appendChild(categorytd);
-                    ntr.appendChild(manufacturertd);
-                    document.getElementById('a1').appendChild(ntr);
+                    products.forEach(function(a){
+                        var ntr = document.createElement('tr');
+                        var nametd = document.createElement('td');
+                        nametd.innerHTML=a.name;
+                        var typetd = document.createElement('td');
+                        typetd.innerHTML=a.type;
+                        var pricetd = document.createElement('td');
+                        pricetd.innerHTML=a.price;
+                        var categorytd = document.createElement('td');
+                        categorytd.innerHTML=a.category;
+                        var manufacturertd = document.createElement('td');
+                        manufacturertd.innerHTML=a.manufacturer;
+                        ntr.appendChild(nametd);
+                        ntr.appendChild(typetd);
+                        ntr.appendChild(pricetd);
+                        ntr.appendChild(categorytd);
+                        ntr.appendChild(manufacturertd);
+                        document.getElementById('a1').appendChild(ntr);
                 })
                 products.forEach(function(a){
                     var ntr = document.createElement('tr');
@@ -132,6 +134,30 @@
                     ntr.appendChild(nametd);
                     ntr.appendChild(pricetd);
                     document.getElementById('a2').appendChild(ntr);
+                });
+                products.sort(function(s,n){
+                    if(s.price<n.price){
+                        return -1;}
+                        else{ return 1; }
+                })  
+                products.forEach(function(a){
+                        var ntr = document.createElement('tr');
+                        var nametd = document.createElement('td');
+                        nametd.innerHTML=a.name;
+                        var typetd = document.createElement('td');
+                        typetd.innerHTML=a.type;
+                        var pricetd = document.createElement('td');
+                        pricetd.innerHTML=a.price;
+                        var categorytd = document.createElement('td');
+                        categorytd.innerHTML=a.category;
+                        var manufacturertd = document.createElement('td');
+                        manufacturertd.innerHTML=a.manufacturer;
+                        ntr.appendChild(nametd);
+                        ntr.appendChild(typetd);
+                        ntr.appendChild(pricetd);
+                        ntr.appendChild(categorytd);
+                        ntr.appendChild(manufacturertd);
+                        document.getElementById('a5').appendChild(ntr);
                 })
                 products.forEach(function(a){
                     var ntr = document.createElement('tr');
@@ -172,15 +198,16 @@
                     ntr.appendChild(manufacturertd);  
                 }) 
                 
-                    var br=products.sort(function(a,b){
-                        if(a.price>b.price){
-                            return 1
-                        }
-                        else{
-                            return -1
-                        }
-                    }) 
-                    console.log(br)  
+                
+                // var br=products.sort(function(a,b){
+                //     if(a.price>b.price){
+                //         return 1
+                //     }
+                //     else{
+                //         return -1
+                //     }
+                //     }) 
+                //     console.log(br)  
         </script>
     </body>
 </html>
