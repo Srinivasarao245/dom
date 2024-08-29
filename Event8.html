@@ -1,14 +1,13 @@
 <html>
     <head>
         <style>
-            #s{ background-color: blue; }
-            #sr{ background-color: red; }
+            #s{ background-color: blue; color: white; width: 50px; border-radius: 30px; }
+            #sr{ background-color: red; border-radius: 30px; }
         </style>
     </head>
      <body> <center>
-                <button id="s" onclick="ab()"> Like </button><span id="a1">0</span>
-                <br>
-                <button id="sr" onclick="abc()"> Dislike </button><span id="a2">0</span>
+                <button id="s" onclick="ab()"> Like </button><br><span id="a1"></span><br>
+                <button id="sr" onclick="abc()"> Dislike </button><br><span id="a2"></span>
             </center>
         <script>
             var i=0;
@@ -17,10 +16,11 @@
                 x.innerHTML=i;
                 i++;
             }
+            var j=0;
             function abc(){
                 var y = document.getElementById('a2')
-                y.innerHTML=i;
-                i++;
+                y.innerHTML=j;
+                j++;
             }
         </script>
      </body>
