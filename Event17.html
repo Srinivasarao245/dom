@@ -5,12 +5,12 @@
             img{
                 width: 200px;
                 height: 300px;
-
+                border-radius: 40px;
             }
         </style>
     </head>
      <body>
-        <div id="a1" onclick="abc()"><img id="a2" src=""></div>
+        <div id="a1" ><img id="a2" src=""></div>
         <button onclick="ab()">Preview</button>
         <button onclick="bc()">Next</button>
         <script>
@@ -20,7 +20,10 @@
             function ab(){
                 var a = document.getElementById("a2");
                 a.src=ar[i];
-                 i--; 
+                 i--;
+                 if(i === 0){
+                    i=ar.length-1;
+                } 
                 }
             function bc(){
                 var a = document.getElementById("a2");

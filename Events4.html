@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <style>
+            h1{
+                color:red;
+            }
+            label{
+                color:red;  
+            }
+            button{
+                background-color: blue;
+                color:white;
+                border-radius: 10px;
+                padding:5px;
+                text-align: center;
+                border:0px;
+            }
+            #u{
+               display:flex;
+               flex-wrap: wrap;
+            }
+            #u li{
+                margin-top: 50px;
+                width:250px;
+                height:250px;
+                border:1px solid;
+                list-style: none;
+            }
+            #u li h2{
+                color:violet;
+            }
+            #u li button{
+                justify-content: end;
+            }
+         </style>
+    </head>
+    <body>
+        <center>
+        <h1>Add Contact Cards With Curd Operations</h1><br>
+        <form onsubmit="add(event)">
+            <label>Name:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" name="Name"><br><br>
+            <label>Number:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" name="Number"><br><br>
+            <label>Email:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="Email" name="Email"><br><br>
+            <label>Image URL:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" name="Image"><br><br>
+            <button>Add Contact</button>
+            <div id="u"></div>
+            </center>
+        </form>
+        <script>
+            var ar = [];
+            function add(e){
+                e.preventDefault();
+                var form = new FormData(e.target);
+                var obj = {};
+                for(var i of form.keys()){
+                    obj[i] = form.get(i);
+                }
+                ar.push(obj);
+                card();
+            }
+            function card(){
+                document.getElementById("u").innerHTML = '';
+                ar.forEach(function(a){
+                    var nli = document.createElement("li");
+                    var ni = document.createElement("img");
+                    ni.src = a["Image"];
+                    var na = document.createElement("h2");
+                    na.innerHTML = "Name:"+a["Name"]
+                    var nb = document.createElement("h2");
+                    nb.innerHTML = "Number:"+a["Number"];
+                    var nc = document.createElement("h2");
+                    nc.innerHTML = "Email ID:"+a["Email"];
+                    var nd = document.createElement("button");
+                    nd.innerHTML = "Edit"
+                    nli.appendChild(ni);
+                    nli.appendChild(na);
+                    nli.appendChild(nb);
+                    nli.appendChild(nc);
+                    nli.appendChild(nd);
+                    document.getElementById("u").appendChild(nli)
+
+                })
+            }
+          
+        </script>
+    </body>
+</html>

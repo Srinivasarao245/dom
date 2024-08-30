@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <style>
+           #h1{
+            display: none;
+           }
+        </style>
+    </head>
+    <body>
+        <input id="d1" type="text">
+        <button id="h2" onclick="abc()">Add</button>
+        <button id="h1" onclick="xyz()">Update</button>
+        <ul id="d2">
+
+        </ul>
+        <script>
+            var ar=[];
+            var eind=null;
+            
+            function abc(){
+                var x=document.getElementById("d1").value;
+                if(x){
+                    if(eind !== null){
+                        ar[eind]=x;
+                        eind=null;
+                    }
+                    else{
+                        ar.push(x);
+                    }
+                    document.getElementById('d2').innerHTML=''
+                    mnc();
+                    document.getElementById('d1').value = '';
+                    document.getElementById('h1').style.display = 'none'; 
+                    document.getElementById('h2').style.display = 'inline'; 
+                }
+            }
+            function mnc(){
+                ar.forEach(function(a,i){
+                   var nli=document.createElement('li');
+                   nli.innerHTML=a;
+
+                   var btn=document.createElement("button")
+                   btn.innerHTML='Delete';
+                   btn.onclick=function(){
+                    ar.splice(i,1)
+                    document.getElementById('d2').innerHTML='';
+                    mnc()
+                   }
+                   nli.appendChild(btn)
+
+                   var etn=document.createElement("button")
+                      etn.innerHTML="Edit"
+                      etn.onclick=function(){
+                        document.getElementById("d1").value=a;
+                        document.getElementById('h1').style.display='inline'
+                        document.getElementById('h2').style.display='none'
+                        eind=i;
+                        // console.log(eind)
+                   }
+                   nli.appendChild(etn)
+                   
+                   document.getElementById('d2').appendChild(nli)
+                });
+            }
+            function xyz(){
+                abc()
+            }
+        </script>
+    </body>
+</html>
